@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.52b110a0.css",
+    "main.js": "/static/js/main.d1742723.js",
+    "static/js/453.70445eaf.chunk.js": "/static/js/453.70445eaf.chunk.js",
+    "static/media/job-listing.jpg": "/static/media/job-listing.d6751f344b74c74b59ed.jpg",
+    "static/media/job-listing2.jpg": "/static/media/job-listing2.976094da56aff09c3dd9.jpg",
+    "static/media/profile-icon.png": "/static/media/profile-icon.eab2cff32935474b28fe.png",
+    "static/media/indian-flag.avif": "/static/media/indian-flag.a89f21dbe2e86b07d14e.avif",
+    "index.html": "/index.html",
+    "main.52b110a0.css.map": "/static/css/main.52b110a0.css.map",
+    "main.d1742723.js.map": "/static/js/main.d1742723.js.map",
+    "453.70445eaf.chunk.js.map": "/static/js/453.70445eaf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.52b110a0.css",
+    "static/js/main.d1742723.js"
+  ]
+}

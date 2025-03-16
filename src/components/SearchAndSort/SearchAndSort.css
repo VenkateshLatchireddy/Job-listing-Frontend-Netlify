@@ -1,0 +1,116 @@
+.search-filter-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(237, 83, 83, 0.6); /* Red shadow */
+}
+
+.search-input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Second Row - Flex for Dropdown, Selected Skills, Buttons */
+.filter-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.skills-dropdown {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  flex-basis: 200px;
+}
+
+.selected-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 500px;
+  flex-basis: 300px;
+}
+
+.skill-chip-container {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.skill-chip {
+  flex: 0 0 80%; /* 80% width */
+  background-color: #feeeee; /* Color for 80% part */
+  color: black;
+  display: flex;
+  align-items: center;
+}
+.skill-chip, .remove-skill{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+
+.custom-button- {
+  display: flex;
+  width: 100px; /* Adjust width as needed */
+  height: 20px; /* Adjust height as needed */
+  border: none;
+  max-height: 40px;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0;
+}
+
+.remove-skill {
+  flex: 0 0 20%; /* 20% width */
+  background-color: #f44336; /* Color for 20% part */
+  color: white;
+  font-size: 16px; /* Adjust cross mark size *//* Red color for the remove icon */
+}
+
+.buttons-container {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.apply-filter-btn,
+.add-job-btn {
+  background-color: #e32727;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.apply-filter-btn:hover,
+.add-job-btn:hover {
+  background-color: #0056b3;
+}
+
+.clear-filters,
+.clear-skills-btn {
+  color: red;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
