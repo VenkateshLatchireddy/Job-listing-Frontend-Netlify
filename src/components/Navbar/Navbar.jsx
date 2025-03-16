@@ -13,8 +13,8 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
 
   // Handle logout
   const handleLogout = () => {
-    localStorage.removeItem("accessToken");
-    localStorage.removeItem("userId");
+    sessionStorage.removeItem("accessToken");
+    sessionStorage.removeItem("userId");
     setIsLoggedIn(false);
     navigate("/login", { replace: true }); // 🔥 Redirect to login page
   };

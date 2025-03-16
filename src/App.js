@@ -20,7 +20,7 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    const token = localStorage.getItem('accessToken'); // Change to 'accessToken'
+    const token = sessionStorage.getItem('accessToken'); // Change to 'accessToken'
     if (token) setIsLoggedIn(true);
     fetchJobs(); // Fetch jobs on mount
   }, []);

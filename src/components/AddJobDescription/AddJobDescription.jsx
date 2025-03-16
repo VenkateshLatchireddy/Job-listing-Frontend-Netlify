@@ -24,7 +24,7 @@ const skillsList = [
 
 const AddJobDescription = () => {
   const navigate = useNavigate();
-  const userId = localStorage.getItem("userId");
+  const userId = sessionStorage.getItem("userId");
   const [selectedSkills, setSelectedSkills] = useState([]);
   const [formData, setFormData] = useState({
     companyName: "",
@@ -62,7 +62,7 @@ const AddJobDescription = () => {
     e.preventDefault();
     setError("");  // Clear previous error messages
 
-    const token = localStorage.getItem("accessToken");
+    const token = sessionStorage.getItem("accessToken");
     if (!token) {
         window.alert("Authentication error. Please log in again.");
         return;

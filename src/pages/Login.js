@@ -59,12 +59,12 @@ const Login = ({ setIsLoggedIn, fetchJobs }) => {
                 console.log("Token received:", token);
                 console.log("User ID received:", userId);
     
-                // Store the token and userId in localStorage
-                localStorage.setItem("accessToken", token);
-                localStorage.setItem("userId", userId); // Store userId
+                // Store the token and userId in sessionStorage
+                sessionStorage.setItem("accessToken", token);
+                sessionStorage.setItem("userId", userId); // Store userId
     
-                console.log("Stored Token:", localStorage.getItem("accessToken"));
-                console.log("Stored User ID:", localStorage.getItem("userId"));
+                console.log("Stored Token:", sessionStorage.getItem("accessToken"));
+                console.log("Stored User ID:", sessionStorage.getItem("userId"));
     
                 // Fetch protected data after login
                 fetchProtectedData(token);

@@ -16,7 +16,7 @@ function JobDetails() {
 
   useEffect(() => {
     // 🔹 Get logged-in user ID from local storage
-    const userId = localStorage.getItem("userId");
+    const userId = sessionStorage.getItem("userId");
     setCurrentUserId(userId);
 
     // 🔹 Fetch job details

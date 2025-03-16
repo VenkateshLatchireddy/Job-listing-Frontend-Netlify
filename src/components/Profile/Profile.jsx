@@ -7,7 +7,7 @@ const Profile = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const token = localStorage.getItem("accessToken"); // Retrieve token from localStorage
+    const token = sessionStorage.getItem("accessToken"); // Retrieve token from localStorage
   
     if (!token) {
       setError("No token found, please log in");
