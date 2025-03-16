@@ -14,7 +14,11 @@ const Login = ({ setIsLoggedIn, fetchJobs }) => {
         window.onpopstate = () => {
           navigate("/", { replace: true });
         };
-      }, [navigate]); // Add `navigate` to the dependency array
+
+        // Clear email and password fields on component mount
+        setEmail("");
+        setPassword("");
+    }, [navigate]); // Add `navigate` to the dependency array
 
     // State for form inputs and error message
     const [email, setEmail] = useState("");
@@ -119,6 +123,7 @@ const Login = ({ setIsLoggedIn, fetchJobs }) => {
                         value={email}
                         onChange={handleChange}
                         required
+                        autoComplete="off" // Disable autofill
                     />
                 </div>
 
@@ -130,6 +135,7 @@ const Login = ({ setIsLoggedIn, fetchJobs }) => {
                         value={password}
                         onChange={handleChange}
                         required
+                        autoComplete="off" // Disable autofill
                     />
                 </div>
 

@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import JobListingimg from "../assets/job-listing.jpg";
 const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
-
 const Register = () => {
   const navigate = useNavigate();
 
@@ -16,7 +15,6 @@ const Register = () => {
     mobile: "",
     role: "user",
   });
-  
 
   const [error, setError] = useState("");
   const [isChecked, setIsChecked] = useState(false); // ✅ Checkbox state
@@ -57,7 +55,6 @@ const Register = () => {
   
     return "";
   };
-  
 
   // Handle form submission
   const handleSubmit = async (e) => {
@@ -101,17 +98,18 @@ const Register = () => {
         {error && <p className="error-message">{error}</p>}
 
         <form onSubmit={handleSubmit}>
-        <div className="input-group">
-          <input
-            type="text"
-            name="name"  // Use 'name' here to match with backend
-            placeholder="Username"
-            value={formData.name}  // 'name' in the state
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="input-group">
+          <div className="input-group">
+            <input
+              type="text"
+              name="name"  // Use 'name' here to match with backend
+              placeholder="Username"
+              value={formData.name}  // 'name' in the state
+              onChange={handleChange}
+              required
+              autoComplete="off" // Disable autofill
+            />
+          </div>
+          <div className="input-group">
             <input
               type="email"
               name="email"
@@ -119,6 +117,7 @@ const Register = () => {
               value={formData.email}
               onChange={handleChange}
               required
+              autoComplete="off" // Disable autofill
             />
           </div>
           <div className="input-group">
@@ -129,6 +128,7 @@ const Register = () => {
               value={formData.password}
               onChange={handleChange}
               required
+              autoComplete="off" // Disable autofill
             />
           </div>
           <div className="input-group">
@@ -139,6 +139,7 @@ const Register = () => {
               value={formData.mobile}
               onChange={handleChange}
               required
+              autoComplete="off" // Disable autofill
             />
           </div>
 
@@ -159,7 +160,8 @@ const Register = () => {
           </button>
         </form>
         <p className="signin-text">
-          Already have an account? <span onClick={() => navigate("/login")} className="signin-link">Sign In</span>
+          Already have an account?{" "}
+          <span onClick={() => navigate("/login")} className="signin-link">Sign In</span>
         </p>
       </div>
       <div className="registration-image">
